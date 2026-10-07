@@ -3,51 +3,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Grid Sampler Manual</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
 <style>
-/* Layout: a list of screens on the left, the picked screen on the right: how to reach it, a picture, its knobs. */
+/* Layout: a printed manual's contents on the left, one numbered section on the right: how to reach it, a figure, its knobs. */
 :root {
-  --bg: #eeefee; --panel: #f8f8f7; --fg: #1a1b1b; --muted: #5f6362; --line: #cfd2d0; --bezel: #1d1f20; --pick: #1a1b1b; --pick-fg: #f8f8f7;
-  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --body: "IBM Plex Sans", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --paper: #ffffff; --ink: #111111; --grey: #666666; --rule: #d9d9d9;
+  --text: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --device: "Silkscreen", "Courier New", monospace;  /* close to the screen's own 5x7 lettering */
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #131414; --panel: #1b1c1c; --fg: #e6e7e6; --muted: #9a9e9c; --line: #333637; --bezel: #2a2d2e; --pick: #e6e7e6; --pick-fg: #131414; color-scheme: dark; } }
-:root[data-theme="dark"] { --bg: #131414; --panel: #1b1c1c; --fg: #e6e7e6; --muted: #9a9e9c; --line: #333637; --bezel: #2a2d2e; --pick: #e6e7e6; --pick-fg: #131414; color-scheme: dark; }
-html, body { background: var(--bg); color: var(--fg); }
-body { font-family: var(--body); font-size: 15px; line-height: 1.55; padding-inline: 16px; padding-block: 24px 48px; }
-.wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 28px; align-items: start; }
-header { grid-column: 1 / -1; }
-h1 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; margin: 0; }
-header p { margin: 4px 0 0; color: var(--muted); max-width: 70ch; }
-nav { position: sticky; top: env(safe-area-inset-top, 0px); display: grid; gap: 14px; max-height: 100vh; overflow-y: auto; padding-bottom: 24px; }
-nav h2 { font: 600 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
-nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
-nav button { all: unset; box-sizing: border-box; width: 100%; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 14px; }
-nav button:hover { background: var(--panel); }
-nav button[aria-current="true"] { background: var(--pick); color: var(--pick-fg); }
-nav button:focus-visible { outline: 2px solid var(--fg); outline-offset: 1px; }
-select { display: none; width: 100%; font: inherit; padding: 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--fg); }
-main { min-width: 0; display: grid; gap: 18px; }
-main h2 { font-family: var(--display); font-size: 1.4rem; margin: 0; }
-.route { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
-.route dt { font: 600 12px/1.9 var(--mono); color: var(--muted); }
-.route dd { margin: 0; }
-kbd { font: 600 12px var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--bg); white-space: nowrap; }
-.screen { background: var(--bezel); padding: 10px; border-radius: 8px; max-width: 980px; }
-.screen img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 3 / 2; image-rendering: pixelated; border-radius: 2px; }
-.about { margin: 0; max-width: 72ch; }
-.about + .about { margin-top: -8px; }
-.table { overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; font-size: 14px; }
-th, td { text-align: left; vertical-align: top; padding: 7px 10px; border-bottom: 1px solid var(--line); }
-th { font: 600 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-td.k { font: 600 13px var(--mono); white-space: nowrap; width: 1%; }
-td.n { font: 600 13px var(--mono); white-space: nowrap; width: 1%; }
-td.p { color: var(--muted); }
-.note { color: var(--muted); font-size: 14px; max-width: 72ch; margin: 0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #0d0d0d; --ink: #ededed; --grey: #9a9a9a; --rule: #333333; color-scheme: dark; } }
+:root[data-theme="dark"] { --paper: #0d0d0d; --ink: #ededed; --grey: #9a9a9a; --rule: #333333; color-scheme: dark; }
+html, body { background: var(--paper); color: var(--ink); }
+body { font-family: var(--text); font-size: 16px; line-height: 1.5; padding-inline: 16px; padding-block: 32px 64px; }
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; align-items: start; }
+header { grid-column: 1 / -1; border-bottom: 2px solid var(--ink); padding-bottom: 12px; }
+h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+header p { margin: 6px 0 0; color: var(--grey); max-width: 68ch; }
+nav { position: sticky; top: env(safe-area-inset-top, 0px); max-height: 100vh; overflow-y: auto; padding-block: 4px 24px; font-size: 14px; }
+nav ol { list-style: none; margin: 0; padding: 0; }
+nav > ol > li { margin-bottom: 14px; }
+nav .chapter { font-weight: 700; margin-bottom: 2px; }
+nav button { all: unset; cursor: pointer; display: block; padding: 1px 0; color: var(--ink); }
+nav button span { display: inline-block; width: 2.6em; color: var(--grey); font-variant-numeric: tabular-nums; }
+nav button:hover { text-decoration: underline; }
+nav button[aria-current="true"] { font-weight: 700; }
+nav button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+select { display: none; width: 100%; font: inherit; padding: 8px; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); }
+main { min-width: 0; }
+.chapter-name { color: var(--grey); margin: 0; }
+main h2 { font-size: 26px; margin: 0 0 16px; display: flex; gap: 14px; align-items: baseline; }
+main h2 .num { font-weight: 400; color: var(--grey); font-variant-numeric: tabular-nums; }
+.route { margin: 0 0 20px; max-width: 68ch; }
+.route b { font-weight: 700; }
+figure { margin: 0 0 20px; max-width: 760px; }
+figure img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 3 / 2; image-rendering: pixelated; border: 1px solid var(--ink); }
+figcaption { font-size: 13px; color: var(--grey); margin-top: 6px; }
+.about { margin: 0 0 12px; max-width: 68ch; }
+.table { overflow-x: auto; margin-top: 24px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--rule); }
+th { font-weight: 700; border-bottom: 2px solid var(--ink); }
+td.k { white-space: nowrap; width: 1%; font-variant-numeric: tabular-nums; }
+td.n { font-family: var(--device); font-size: 13px; white-space: nowrap; width: 1%; padding-top: 10px; }
+.note { color: var(--grey); font-size: 14px; max-width: 68ch; margin: 12px 0 0; }
 @media (max-width: 760px) {
-  .wrap { grid-template-columns: minmax(0, 1fr); }
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   nav { display: none; }
   select { display: block; }
 }
@@ -55,13 +55,12 @@ td.p { color: var(--muted); }
 
 <div class="wrap">
   <header>
-    <h1>Grid Sampler manual</h1>
-    <p>Every screen, how to get to it, and what each of the eight knobs does on it. The panel buttons are the ones planned for the next hardware revision; until then the Launchpad stand-ins do the same, listed beside them.</p>
+    <h1>Grid Sampler</h1>
+    <p>Every screen, how to get to it, and what each of the eight knobs does on it. Panel buttons are those planned for the next hardware revision; until then the Launchpad stand-ins do the same.</p>
   </header>
-  <nav id="nav" aria-label="Screens"></nav>
+  <nav id="nav" aria-label="Contents"></nav>
   <main>
-    <label class="visually-hidden" for="pick" hidden>Screen</label>
-    <select id="pick" aria-label="Screen"></select>
+    <select id="pick" aria-label="Section"></select>
     <div id="page"></div>
   </main>
 </div>
@@ -99,15 +98,15 @@ const SCREENS = [
     ]},
   },
   { group: "Basics", id: "detail-box", title: "Detail box", img: "detail-box",
-    route: ["Turn or push a knob whose column can't show everything", "The same"],
+    route: ["Turn or push a knob whose column can't show everything", "the same"],
     about: ["Here TRIGGER is being turned: its column shows LATCH, and the box above lists all three choices with the current one picked out. It goes 1.5 seconds after the knob stops."],
   },
   { group: "Basics", id: "start", title: "Nothing selected", img: "start",
-    route: ["At power-up with an empty project", "The same"],
+    route: ["At power-up with an empty project", "the same"],
     about: ["Play a note on any device. If a slot plays from that note it's selected and its pages appear; if not, the empty note screen offers to build one."],
   },
   { group: "Basics", id: "empty-note", title: "Empty note", img: "empty-note",
-    route: ["Play a note that nothing plays from", "The same"],
+    route: ["Play a note that nothing plays from", "the same"],
     about: ["The note is selected, ready to build a slot on it."],
     knobs: [[7, "ADD", "Choose the first action: SAMPLE, MIDI or TRIGGER", "Creates the slot on this note with that action, and opens it"]],
   },
@@ -457,7 +456,7 @@ const SCREENS = [
     ],
   },
   { group: "Project and files", id: "confirm", title: "Question", img: "confirm",
-    route: ["Deleting a slot or project, starting a new project, placing a sample", "The same"],
+    route: ["Deleting a slot or project, starting a new project, placing a sample", "the same"],
     about: ["Asks first, with CANCEL picked, so pushing twice by accident never deletes anything."],
     knobs: [
       [1, "ANSWER", "Picks CANCEL or the action", "OK: does what's picked"],
@@ -505,20 +504,29 @@ const nav = document.getElementById("nav"), pick = document.getElementById("pick
 const el = (tag, props = {}, ...kids) => { const e = Object.assign(document.createElement(tag), props); e.append(...kids.filter(k => k != null)); return e; };
 
 const groups = [...new Set(SCREENS.map(s => s.group))];
-for (const g of groups) {
-  const ul = el("ul");
-  const og = el("optgroup", { label: g });
+// Numbered like a printed manual: chapter per group, section per screen.
+SCREENS.forEach(s => {
+  const c = groups.indexOf(s.group) + 1;
+  s.num = c + "." + (SCREENS.filter(x => x.group === s.group).indexOf(s) + 1);
+});
+const contents = el("ol");
+groups.forEach((g, i) => {
+  const items = el("ol");
+  const og = el("optgroup", { label: (i + 1) + "  " + g });
   for (const s of SCREENS.filter(x => x.group === g)) {
-    ul.append(el("li", {}, el("button", { type: "button", textContent: s.title, onclick: () => show(s.id), id: "nav-" + s.id })));
-    og.append(el("option", { value: s.id, textContent: s.title }));
+    items.append(el("li", {}, el("button", { type: "button", id: "nav-" + s.id, onclick: () => show(s.id) },
+      el("span", { textContent: s.num }), s.title)));
+    og.append(el("option", { value: s.id, textContent: s.num + "  " + s.title }));
   }
-  nav.append(el("section", {}, el("h2", { textContent: g }), ul));
+  contents.append(el("li", {}, el("div", { className: "chapter", textContent: (i + 1) + "  " + g }), items));
   pick.append(og);
-}
+});
+nav.append(contents);
 pick.onchange = () => show(pick.value);
 
-function screenPicture(name, alt) {
-  return el("div", { className: "screen" }, el("img", { src: IMAGES[name], alt, width: 480, height: 320 }));
+function figure(name, caption) {
+  return el("figure", {}, el("img", { src: IMAGES[name], alt: caption, width: 480, height: 320 }),
+    el("figcaption", { textContent: caption }));
 }
 
 function show(id) {
@@ -526,35 +534,36 @@ function show(id) {
   document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-current", b.id === "nav-" + s.id));
   pick.value = s.id;
   if (location.hash.slice(1) !== s.id) history.replaceState(null, "", "#" + s.id);
-  const parts = [el("h2", { textContent: s.title })];
+  const parts = [el("p", { className: "chapter-name", textContent: groups.indexOf(s.group) + 1 + "  " + s.group }),
+    el("h2", {}, el("span", { className: "num", textContent: s.num }), s.title)];
   if (s.route) {
-    parts.push(el("dl", { className: "route" },
-      el("dt", { textContent: "Panel" }), el("dd", { textContent: s.route[0] }),
-      el("dt", { textContent: "Launchpad" }), el("dd", { textContent: s.route[1] })));
+    parts.push(el("p", { className: "route" }, el("b", { textContent: "Get there: " }), s.route[0] + ". ",
+      el("b", { textContent: "On the Launchpad: " }), s.route[1] + "."));
   }
-  if (s.img) parts.push(screenPicture(s.img, s.title + " screen"));
+  if (s.img) parts.push(figure(s.img, "Figure " + s.num + ". " + s.title));
   for (const p of s.about || []) parts.push(el("p", { className: "about", textContent: p }));
-  if (s.extra) parts.push(screenPicture(s.extra, "Another version of the " + s.title + " screen"));
+  if (s.extra) parts.push(figure(s.extra, "Figure " + s.num + "b. BUS B with a delay"));
   if (s.knobs) {
     const body = el("tbody");
     for (const [k, name, turn, push] of s.knobs) {
       body.append(el("tr", {},
         el("td", { className: "k", textContent: k }),
-        el("td", { className: "n", textContent: name || "(push only)" }),
+        el("td", { className: "n", textContent: name || "-" }),
         el("td", { textContent: turn || "" }),
-        el("td", { className: push ? "" : "p", textContent: push || "" })));
+        el("td", { textContent: push || "" })));
     }
     parts.push(el("div", { className: "table" }, el("table", {},
       el("thead", {}, el("tr", {}, ...["Knob", "Setting", "Turn", "Push"].map(h => el("th", { textContent: h })))), body)));
-    parts.push(el("p", { className: "note", textContent: "Knobs not listed do nothing on this screen. Shift + push resets most plain settings to how a new one has them." }));
+    parts.push(el("p", { className: "note", textContent: "Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them." }));
   }
   if (s.table) {
     const body = el("tbody");
-    for (const row of s.table.rows) body.append(el("tr", {}, ...row.map((c, i) => el("td", { className: i === 0 ? "n" : "", textContent: c }))));
+    for (const row of s.table.rows) body.append(el("tr", {}, ...row.map(c => el("td", { textContent: c }))));
     parts.push(el("div", { className: "table" }, el("table", {},
       el("thead", {}, el("tr", {}, ...s.table.head.map(h => el("th", { textContent: h })))), body)));
   }
   pageEl.replaceChildren(...parts);
+  window.scrollTo(0, 0);
 }
 
 const IMAGES = {
