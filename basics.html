@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. Basics - Grid Sampler manual</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<header class="running"><a href="index.html">Grid Sampler manual</a><span>Chapter 1</span></header>
+<main>
+<p class="chapter-no">Chapter 1</p>
+<h1>Basics</h1>
+<ol class="chapter-toc"><li><a href="#getting-around">1.1 Getting around</a></li><li><a href="#detail-box">1.2 Detail box</a></li><li><a href="#start">1.3 Nothing selected</a></li><li><a href="#empty-note">1.4 Empty note</a></li></ol>
+<section id="getting-around">
+<h2><span class="num">1.1</span> Getting around</h2>
+<p>The screen has a header along the top, a picture in the middle and a row of eight columns along the bottom. Column n is knob n, counting from the left.</p>
+<p>Turning a knob changes its column. A column with a push action says so on its bottom edge. Holding Shift shows what Shift changes: on most settings, Shift + push puts the setting back to how a new one has it (RESET), and Shift + turn makes finer steps (FINE).</p>
+<p>While you turn or push a knob, a box can appear above its column for 1.5 seconds with the setting in full: every choice of a list, a file&#x27;s details, or a name too long for the column. Settings whose column already shows everything get no box.</p>
+<p>Two-state settings are drawn as a switch, filled when on, and pushing them flips them. Knobs that step through a list (ACTION, DEVICE, TARGET and so on) show a small list with arrows rather than a dial.</p>
+<div class="table"><table class=""><thead><tr><th>Panel button</th><th>Launchpad today</th><th>Does</th></tr></thead><tbody><tr><td>Knob 1 to 8</td><td>Right-hand column picks a knob (top is 1); User 1 turns it down, User 2 up; press the picked button again to push it</td><td>Turns or pushes that column</td></tr><tr><td>SHIFT</td><td>Mixer (top row, far right), held</td><td>Second functions</td></tr><tr><td>PREV / NEXT</td><td>Left / right arrows</td><td>Previous or next page; with Shift, the first or last</td></tr><tr><td>MODE</td><td>Tap Session</td><td>Closes the screen that&#x27;s open</td></tr><tr><td>SAVE</td><td>Shift + Session</td><td>Saves the project; the first time it asks for a name</td></tr><tr><td>BROWSE</td><td>Session + up</td><td>Opens the file browser</td></tr><tr><td>LEARN</td><td>Session + down</td><td>CC learn: turn a setting, press LEARN, move a controller knob</td></tr><tr><td>Shift + LEARN</td><td>Mixer + Session + down</td><td>The list of CC bindings (CCS)</td></tr><tr><td>KIT</td><td>Shift + up</td><td>The inputs overview</td></tr><tr><td>SETUP</td><td>Shift + down</td><td>Device settings</td></tr><tr><td>EDIT</td><td>Shift + left</td><td>The list of every slot (SLOTS)</td></tr><tr><td>MIXER</td><td>Shift + right</td><td>The mixer</td></tr><tr><td>UNDO / redo</td><td>Session + User 1 / Session + User 2</td><td>Undo and redo recording and pattern edits</td></tr><tr><td>PLAY, STOP, REC, OVERDUB, ERASE, REPEAT, TAP, SEQ</td><td>Session + the right-hand column, top to bottom</td><td>The transport, and SEQ opens the sequencer</td></tr><tr><td>Shift + SEQ</td><td>Hold Session, then Mixer, then the bottom of the right-hand column</td><td>The arrangement</td></tr><tr><td>Shift + REC</td><td>Hold Session, then Mixer, then the third button of the right-hand column</td><td>SAMPLING: record the main out or a mixer channel</td></tr><tr><td></td><td>Up / down on their own</td><td>Change kit (an octave in Keys)</td></tr></tbody></table></div>
+</section>
+<section id="detail-box">
+<h2><span class="num">1.2</span> Detail box</h2>
+<p class="access">Turn or push a knob whose column can&#x27;t show everything.<br>Launchpad: the same.</p>
+<figure><img src="images/detail-box.png" width="480" height="320" alt="Figure 1.2. Detail box"><figcaption>Figure 1.2. Detail box</figcaption></figure>
+<p>Here TRIGGER is being turned: its column shows LATCH, and the box above lists all three choices with the current one picked out. It goes 1.5 seconds after the knob stops.</p>
+</section>
+<section id="start">
+<h2><span class="num">1.3</span> Nothing selected</h2>
+<p class="access">At power-up with an empty project.<br>Launchpad: the same.</p>
+<figure><img src="images/start.png" width="480" height="320" alt="Figure 1.3. Nothing selected"><figcaption>Figure 1.3. Nothing selected</figcaption></figure>
+<p>Play a note on any device. If a slot plays from that note it&#x27;s selected and its pages appear; if not, the empty note screen offers to build one.</p>
+</section>
+<section id="empty-note">
+<h2><span class="num">1.4</span> Empty note</h2>
+<p class="access">Play a note that nothing plays from.<br>Launchpad: the same.</p>
+<figure><img src="images/empty-note.png" width="480" height="320" alt="Figure 1.4. Empty note"><figcaption>Figure 1.4. Empty note</figcaption></figure>
+<p>The note is selected, ready to build a slot on it.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>7</td><td>ADD</td><td>Choose the first action: SAMPLE, MIDI or TRIGGER</td><td>Creates the slot on this note with that action, and opens it</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+</main>
+<nav class="pager"><span></span><a href="slot-pages.html">Next: Slot pages</a></nav>
+</body>
+</html>

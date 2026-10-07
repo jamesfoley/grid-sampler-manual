@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. Sequencer - Grid Sampler manual</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<header class="running"><a href="index.html">Grid Sampler manual</a><span>Chapter 6</span></header>
+<main>
+<p class="chapter-no">Chapter 6</p>
+<h1>Sequencer</h1>
+<ol class="chapter-toc"><li><a href="#seq-seq">6.1 SEQ</a></li><li><a href="#seq-rec">6.2 SEQ: REC</a></li><li><a href="#seq-tracks">6.3 SEQ: TRACKS</a></li><li><a href="#roll">6.4 Piano roll</a></li><li><a href="#arrange">6.5 ARRANGE</a></li></ol>
+<section id="seq-seq">
+<h2><span class="num">6.1</span> SEQ</h2>
+<p class="access">SEQ.<br>Launchpad: Session + the bottom of the right-hand column.</p>
+<figure><img src="images/seq-seq.png" width="480" height="320" alt="Figure 6.1. SEQ"><figcaption>Figure 6.1. SEQ</figcaption></figure>
+<p>The pattern playing, its timing and the click. The middle shows the pattern&#x27;s tracks. PREV and NEXT step SEQ&#x27;s three pages; SEQ or MODE closes.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>PATTERN</td><td>Which pattern plays and records</td><td></td></tr><tr><td>2</td><td>TEMPO</td><td>30 to 300 BPM; Shift for tenths</td><td></td></tr><tr><td>3</td><td>BEATS</td><td>Beats in a bar, 1 to 16</td><td></td></tr><tr><td>4</td><td>BEAT</td><td>The beat&#x27;s length: 1/4, 1/8 or 1/16</td><td></td></tr><tr><td>5</td><td>BARS</td><td>The pattern&#x27;s length, 1 to 999 bars</td><td></td></tr><tr><td>6</td><td>LOOP</td><td>Plays round again at the end</td><td>Toggles</td></tr><tr><td>7</td><td>CLICK</td><td>The metronome</td><td>Toggles</td></tr><tr><td>8</td><td>CLICK LVL</td><td>Its level</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="seq-rec">
+<h2><span class="num">6.2</span> SEQ: REC</h2>
+<p class="access">NEXT from SEQ.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/seq-rec.png" width="480" height="320" alt="Figure 6.2. SEQ: REC"><figcaption>Figure 6.2. SEQ: REC</figcaption></figure>
+<p>How recording lands on the grid. REC and OVERDUB start recording; ERASE (held) removes notes as they pass; NOTE REPEAT (held) repeats a held pad on the grid.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>QUANTISE</td><td>The grid notes are pulled to as they&#x27;re recorded, OFF to 1/32T</td><td>APPLY: moves every note in the pattern onto the grid, STRENGTH of the way (undoable)</td></tr><tr><td>2</td><td>STRENGTH</td><td>How far QUANTISE moves notes, 0 to 100%</td><td></td></tr><tr><td>3</td><td>SWING</td><td>50 to 75%: every second step that late</td><td></td></tr><tr><td>4</td><td>REPEAT</td><td>NOTE REPEAT&#x27;s rate, 1/4 to 1/32T</td><td></td></tr><tr><td>5</td><td>COUNT IN</td><td>A bar&#x27;s count-in before recording from stopped</td><td>Toggles</td></tr><tr><td>6</td><td>CLOCK OUT</td><td>Sends MIDI clock while playing</td><td>Toggles</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="seq-tracks">
+<h2><span class="num">6.3</span> SEQ: TRACKS</h2>
+<p class="access">NEXT from REC.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/seq-tracks.png" width="480" height="320" alt="Figure 6.3. SEQ: TRACKS"><figcaption>Figure 6.3. SEQ: TRACKS</figcaption></figure>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>TRACK</td><td>Picks a row of the pattern</td><td>ROLL: opens its piano roll. Shift: DELETE removes it from the pattern (UNDO puts it back)</td></tr><tr><td>2</td><td>SLOT</td><td>Picks any slot, even one the pattern doesn&#x27;t play yet</td><td>ROLL: opens its piano roll to put notes in</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="roll">
+<h2><span class="num">6.4</span> Piano roll</h2>
+<p class="access">Push TRACK or SLOT on SEQ: TRACKS.<br>Launchpad: Pick knob 1 and press it again.</p>
+<figure><img src="images/roll.png" width="480" height="320" alt="Figure 6.4. Piano roll"><figcaption>Figure 6.4. Piano roll</figcaption></figure>
+<p>One slot&#x27;s notes in the pattern, a key a row, for step editing. MODE goes back to SEQ.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>NOTE</td><td>Picks a note</td><td>Shift + push deletes the picked note</td></tr><tr><td>2</td><td>PITCH</td><td>Moves the picked note up or down</td><td></td></tr><tr><td>3</td><td>LEVEL</td><td>Its velocity; Shift for finer</td><td></td></tr><tr><td>4</td><td>LENGTH</td><td>Its length; Shift for finer</td><td></td></tr><tr><td>5</td><td>MARKER</td><td>Moves the marker where a new note goes</td><td>ADD a note at the marker</td></tr><tr><td>6</td><td>TIME</td><td>Moves the picked note in time, snapping to the grid showing</td><td></td></tr><tr><td>7</td><td>ZOOM</td><td>Zooms in on the pattern</td><td>FIT</td></tr><tr><td>8</td><td>SCROLL</td><td>Moves the view</td><td>MARKER: follow the marker again</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="arrange">
+<h2><span class="num">6.5</span> ARRANGE</h2>
+<p class="access">Shift + SEQ.<br>Launchpad: Hold Session, then Mixer, then the bottom of the right-hand column.</p>
+<figure><img src="images/arrange.png" width="480" height="320" alt="Figure 6.5. ARRANGE"><figcaption>Figure 6.5. ARRANGE</figcaption></figure>
+<p>An arrangement: a row per pattern, bars across, blocks where a pattern plays. PLAY in ARRANGE mode plays it. Arrangement edits have no undo.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>BAR</td><td>Moves the cursor along the bars (carries a picked-up block)</td><td>PLACE a block of the pattern, or PICK UP the block under the cursor and DROP it. Shift + push removes it</td></tr><tr><td>2</td><td>PATTERN</td><td>Moves the cursor between rows</td><td></td></tr><tr><td>3</td><td>LENGTH</td><td>The length of the block under the cursor</td><td>COPY the block</td></tr><tr><td>4</td><td>ARRANGE</td><td>Picks which arrangement</td><td>RENAME it</td></tr><tr><td>5</td><td>PLAY</td><td>What PLAY plays: the PATTERN or the ARRANGE-ment</td><td>FROM BAR: plays from the cursor&#x27;s bar</td></tr><tr><td>6</td><td>LOOP</td><td>Loops the arrangement, ON or OFF</td><td></td></tr><tr><td>7</td><td>ZOOM</td><td>Bars across the screen</td><td></td></tr><tr><td>8</td><td>SCROLL</td><td>Moves the view</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+</main>
+<nav class="pager"><a href="mixer.html">Previous: Mixer</a><a href="sampling.html">Next: Sampling</a></nav>
+</body>
+</html>

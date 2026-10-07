@@ -1,0 +1,121 @@
+/* Set like a printed hardware manual: serif text, sans headings, ruled tables, framed figures. */
+:root {
+  --ink: #1a1a1a;
+  --grey: #5c5c5c;
+  --rule: #1a1a1a;
+  --light-rule: #c8c8c8;
+  --paper: #fdfdfb;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+html { background: var(--paper); color: var(--ink); }
+body {
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 24px 16px 64px;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+a { color: inherit; }
+h1, h2, .running, .chapter-no, .subtitle, figcaption, table, .pager, .access, .note { font-family: var(--sans); }
+
+.running {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--grey);
+  border-bottom: 1px solid var(--light-rule);
+  padding-bottom: 6px;
+  margin-bottom: 48px;
+}
+.running a { text-decoration: none; }
+.running a:hover { text-decoration: underline; }
+
+.chapter-no {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--grey);
+}
+h1 {
+  margin: 4px 0 20px;
+  font-size: 34px;
+  line-height: 1.15;
+  border-bottom: 3px solid var(--rule);
+  padding-bottom: 10px;
+}
+.chapter-toc { list-style: none; padding: 0; margin: 0 0 40px; font-size: 15px; columns: 2 14rem; }
+.chapter-toc a { text-decoration: none; }
+.chapter-toc a:hover { text-decoration: underline; }
+
+section { margin-top: 56px; }
+h2 {
+  font-size: 22px;
+  margin: 0 0 6px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 4px;
+}
+h2 .num { font-weight: 400; margin-right: 0.4em; }
+
+.access { margin: 0 0 18px; font-size: 14px; color: var(--grey); }
+
+p { margin: 0 0 14px; hyphens: auto; }
+
+figure { margin: 22px 0 24px; }
+figure img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  image-rendering: pixelated;
+  border: 1px solid var(--ink);
+  padding: 6px;
+  background: #000;
+}
+figcaption { font-size: 13px; color: var(--grey); margin-top: 6px; }
+
+.table { overflow-x: auto; margin: 22px 0 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 1.4; }
+thead th { text-align: left; font-weight: 700; border-top: 2px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 6px 12px 6px 0; }
+td { vertical-align: top; padding: 6px 12px 6px 0; border-bottom: 1px solid var(--light-rule); }
+tbody tr:last-child td { border-bottom: 2px solid var(--rule); }
+table.knobs td:first-child { width: 2.5em; }
+table.knobs td:nth-child(2) { white-space: nowrap; font-weight: 700; }
+.note { font-size: 13px; color: var(--grey); }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 64px;
+  padding-top: 10px;
+  border-top: 1px solid var(--light-rule);
+  font-size: 14px;
+}
+
+.title-page h1 { font-size: 44px; border: 0; margin: 48px 0 0; padding: 0; }
+.subtitle { font-size: 20px; color: var(--grey); margin: 0 0 32px; border-bottom: 3px solid var(--rule); padding-bottom: 16px; }
+.title-page h2 { border: 0; margin-top: 40px; font-size: 18px; text-transform: uppercase; letter-spacing: 0.08em; }
+.contents, .contents ol { list-style: none; padding: 0; margin: 0; }
+.contents > li { margin: 0 0 18px; }
+.contents .chapter { font-family: var(--sans); font-weight: 700; text-decoration: none; font-size: 17px; }
+.contents ol { margin: 4px 0 0 2.2em; font-size: 15px; }
+.contents ol a { text-decoration: none; }
+.contents a:hover { text-decoration: underline; }
+.contents .num { display: inline-block; min-width: 2.2em; font-variant-numeric: tabular-nums; }
+.contents ol .num { min-width: 2.6em; color: var(--grey); }
+
+main > section > ul { margin: 0; padding-left: 1.2em; }
+main > section > ul li { margin-bottom: 8px; }
+
+@media print {
+  html { background: #fff; }
+  .running, .pager, .chapter-toc { display: none; }
+  section { break-inside: avoid-page; }
+  a { text-decoration: none; }
+}

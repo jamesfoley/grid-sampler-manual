@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Sample action - Grid Sampler manual</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<header class="running"><a href="index.html">Grid Sampler manual</a><span>Chapter 3</span></header>
+<main>
+<p class="chapter-no">Chapter 3</p>
+<h1>Sample action</h1>
+<ol class="chapter-toc"><li><a href="#sample-sample">3.1 SAMPLE</a></li><li><a href="#sample-loop">3.2 LOOP</a></li><li><a href="#sample-chop">3.3 CHOP</a></li><li><a href="#sample-amp">3.4 AMP</a></li><li><a href="#sample-filter">3.5 FILTER</a></li><li><a href="#sample-mod">3.6 MOD</a></li><li><a href="#sample-zones">3.7 ZONES</a></li><li><a href="#sample-layer">3.8 LAYER</a></li></ol>
+<section id="sample-sample">
+<h2><span class="num">3.1</span> SAMPLE</h2>
+<p class="access">NEXT from SYSTEM, with a sample action picked.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/sample-sample.png" width="480" height="320" alt="Figure 3.1. SAMPLE"><figcaption>Figure 3.1. SAMPLE</figcaption></figure>
+<p>The sample and the part of it that plays, over its waveform. With zones, these settings belong to the zone shown on ZONES and carry a Z1, Z2 tag.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>SAMPLE</td><td>Steps through the samples already loaded</td><td>Opens the browser to pick a WAV from the card</td></tr><tr><td>2</td><td>START</td><td>Where it starts playing; finer steps when zoomed in, and with Shift</td><td></td></tr><tr><td>3</td><td>END</td><td>Where it stops</td><td></td></tr><tr><td>4</td><td>REVERSE</td><td>Plays it backwards. On a streamed sample this loads the region into memory, or says it won&#x27;t fit</td><td>Toggles</td></tr><tr><td>5</td><td>TUNE</td><td>-48 to +48 semitones</td><td></td></tr><tr><td>6</td><td>FINE</td><td>-100 to +100 cents</td><td></td></tr><tr><td>7</td><td>ZOOM</td><td>Magnifies the waveform round the marker edited last</td><td>FIT: the whole sample again</td></tr><tr><td>8</td><td>SCROLL</td><td>Moves the zoomed view without moving a marker; the bar shows where the view is</td><td>MARKER: follow the marker again</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="sample-loop">
+<h2><span class="num">3.2</span> LOOP</h2>
+<p class="access">NEXT from SAMPLE.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/sample-loop.png" width="480" height="320" alt="Figure 3.2. LOOP"><figcaption>Figure 3.2. LOOP</figcaption></figure>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>LOOP</td><td>OFF, FWD (round and round) or PING (back and forth). On a streamed sample this loads it into memory, or says it won&#x27;t fit</td><td></td></tr><tr><td>2</td><td>LP START</td><td>Where the loop starts</td><td></td></tr><tr><td>3</td><td>LP END</td><td>Where it ends</td><td></td></tr><tr><td>7</td><td>ZOOM</td><td>As on SAMPLE</td><td>FIT</td></tr><tr><td>8</td><td>SCROLL</td><td>As on SAMPLE</td><td>MARKER</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="sample-chop">
+<h2><span class="num">3.3</span> CHOP</h2>
+<p class="access">NEXT from LOOP.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/sample-chop.png" width="480" height="320" alt="Figure 3.3. CHOP"><figcaption>Figure 3.3. CHOP</figcaption></figure>
+<p>Makes copies of this slot, each playing one slice of START to END, on consecutive notes.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>SLICES</td><td>How many equal slices EVEN makes, 2 to 16</td><td></td></tr><tr><td>2</td><td>CHOKE</td><td>The choke group the slices go in, so each cuts the last</td><td></td></tr><tr><td>3</td><td>EVEN</td><td></td><td>Then play a note: SLICES equal slices on consecutive notes from there</td></tr><tr><td>4</td><td>TAP</td><td></td><td>Plays the sample; each note you tap starts a slice there. Any button ends tapping</td></tr><tr><td>7</td><td>ZOOM</td><td>As on SAMPLE</td><td>FIT</td></tr><tr><td>8</td><td>SCROLL</td><td>As on SAMPLE</td><td>MARKER</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="sample-amp">
+<h2><span class="num">3.4</span> AMP</h2>
+<p class="access">NEXT from CHOP.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/sample-amp.png" width="480" height="320" alt="Figure 3.4. AMP"><figcaption>Figure 3.4. AMP</figcaption></figure>
+<p>The volume envelope, drawn above, and where the sound goes.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>ATTACK</td><td>Time to full level</td><td></td></tr><tr><td>2</td><td>DECAY</td><td>Time down to the sustain level</td><td></td></tr><tr><td>3</td><td>SUSTAIN</td><td>Level while held, 0 to 100%</td><td></td></tr><tr><td>4</td><td>RELEASE</td><td>Time to fade after letting go</td><td></td></tr><tr><td>5</td><td>VOLUME</td><td>Level in dB, OFF at the bottom</td><td></td></tr><tr><td>6</td><td>PAN</td><td>Left to right</td><td></td></tr><tr><td>7</td><td>MIX CH</td><td>Which of the 8 mixer channels it plays through</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="sample-filter">
+<h2><span class="num">3.5</span> FILTER</h2>
+<p class="access">NEXT from AMP.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/sample-filter.png" width="480" height="320" alt="Figure 3.5. FILTER"><figcaption>Figure 3.5. FILTER</figcaption></figure>
+<p>A filter with its own envelope, in the same order as AMP&#x27;s. The picture shows its response.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>FILTER</td><td>OFF, LOW pass, HIGH pass or BAND pass</td><td></td></tr><tr><td>2</td><td>CUTOFF</td><td>The cutoff frequency</td><td></td></tr><tr><td>3</td><td>RESO</td><td>Resonance, 0 to 100%</td><td></td></tr><tr><td>4</td><td>ENV AMT</td><td>How far the envelope moves the cutoff, -100 to +100%</td><td></td></tr><tr><td>5</td><td>F ATTACK</td><td>The filter envelope&#x27;s attack</td><td></td></tr><tr><td>6</td><td>F DECAY</td><td>Its decay</td><td></td></tr><tr><td>7</td><td>F SUSTAIN</td><td>Its sustain level</td><td></td></tr><tr><td>8</td><td>F RELEASE</td><td>Its release</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="sample-mod">
+<h2><span class="num">3.6</span> MOD</h2>
+<p class="access">NEXT from FILTER.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/sample-mod.png" width="480" height="320" alt="Figure 3.6. MOD"><figcaption>Figure 3.6. MOD</figcaption></figure>
+<p>An LFO and where it goes, drawn over one second, plus velocity to cutoff.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>LFO WAVE</td><td>SINE, TRI, SQUARE or SAW</td><td></td></tr><tr><td>2</td><td>LFO RATE</td><td>0.05 to 30Hz</td><td></td></tr><tr><td>3</td><td>LFO&gt;PITCH</td><td>Vibrato depth, up to 24 semitones</td><td></td></tr><tr><td>4</td><td>LFO&gt;CUT</td><td>How far it moves the filter, -100 to +100%</td><td></td></tr><tr><td>5</td><td>LFO&gt;AMP</td><td>Tremolo depth, 0 to 100%</td><td></td></tr><tr><td>8</td><td>VEL&gt;CUT</td><td>How far playing harder opens the filter, 0 to 100%</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="sample-zones">
+<h2><span class="num">3.7</span> ZONES</h2>
+<p class="access">NEXT from MOD.<br>Launchpad: Right arrow.</p>
+<figure><img src="images/sample-zones.png" width="480" height="320" alt="Figure 3.7. ZONES"><figcaption>Figure 3.7. ZONES</figcaption></figure>
+<p>Several samples across the keys, each with its own range and root (keygroups). Only one zone sounds per note. The slot keeps one PITCHED assignment covering every zone&#x27;s keys on the device chosen with KEYS.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>ZONE</td><td>Which zone is shown</td><td>ADD a zone; Shift + push removes the one shown</td></tr><tr><td>2</td><td>SAMPLE</td><td>The zone&#x27;s sample</td><td>Browse for its WAV. Shift + push and pick any WAV: SPREAD makes a zone of every WAV in its folder</td></tr><tr><td>3</td><td>LOW</td><td>The zone&#x27;s lowest note</td><td>PLAY KEYS: play the two ends of the range</td></tr><tr><td>4</td><td>HIGH</td><td>Its highest note</td><td>PLAY KEYS</td></tr><tr><td>5</td><td>ROOT</td><td>The note it plays at its own pitch</td><td></td></tr><tr><td>6</td><td>VEL LOW</td><td>The softest velocity it answers to</td><td></td></tr><tr><td>7</td><td>VEL HIGH</td><td>The hardest</td><td></td></tr><tr><td>8</td><td>KEYS</td><td>The device whose keys play the zones</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="sample-layer">
+<h2><span class="num">3.8</span> LAYER</h2>
+<p class="access">The last page (Shift + NEXT).<br>Launchpad: Mixer + right arrow.</p>
+<figure><img src="images/sample-layer.png" width="480" height="320" alt="Figure 3.8. LAYER"><figcaption>Figure 3.8. LAYER</figcaption></figure>
+<p>Which velocities this action answers to, so a slot&#x27;s actions can be layered or switched by how hard you play.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>VEL LOW</td><td>The softest velocity that plays this action</td><td></td></tr><tr><td>2</td><td>VEL HIGH</td><td>The hardest</td><td></td></tr><tr><td>3</td><td>MUTE</td><td>Silences this action only</td><td>Toggles</td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+</main>
+<nav class="pager"><a href="slot-pages.html">Previous: Slot pages</a><a href="other-actions.html">Next: Other actions</a></nav>
+</body>
+</html>
