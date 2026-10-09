@@ -77,6 +77,14 @@ figure img {
   padding: 6px;
   background: #000;
 }
+figure svg.panel { display: block; width: 100%; max-width: 640px; height: auto; font-family: var(--sans); }
+svg.panel .key { fill: var(--paper); stroke: var(--ink); stroke-width: 1.5; }
+svg.panel .key.shift { fill: var(--ink); }
+svg.panel .screen, svg.panel .knob { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+svg.panel text { text-anchor: middle; }
+svg.panel .name { font-size: 11px; font-weight: 700; fill: var(--ink); }
+svg.panel .name.inv { fill: var(--paper); }
+svg.panel .alt { font-size: 9px; fill: var(--grey); }
 figcaption { font-size: 13px; color: var(--grey); margin-top: 6px; }
 
 .table { overflow-x: auto; margin: 22px 0 8px; }

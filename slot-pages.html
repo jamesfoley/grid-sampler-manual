@@ -14,7 +14,7 @@
 <ol class="chapter-toc"><li><a href="#sample-slot">2.1 SLOT</a></li><li><a href="#sample-inputs">2.2 INPUTS</a></li><li><a href="#sample-play">2.3 PLAY</a></li><li><a href="#sample-arp">2.4 ARP</a></li></ol>
 <section id="sample-slot">
 <h2><span class="num">2.1</span> SLOT</h2>
-<p class="access">Select a slot by playing it; SLOT is its first page (Shift + PREV).<br>Launchpad: Play a pad; Mixer + left.</p>
+<p class="access">Select a slot by playing it; SLOT is its first page (Shift + PREV).</p>
 <figure><img src="images/sample-slot.png" width="480" height="320" alt="Figure 2.1. SLOT"><figcaption>Figure 2.1. SLOT</figcaption></figure>
 <p>How the slot behaves when it&#x27;s pressed, and the list of its actions. A slot is whatever a note plays: its actions can be samples, MIDI notes out, or presses of other slots. The pages from SAMPLE on edit the action picked here.</p>
 <div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>ADD</td><td>Choose SAMPLE, MIDI or TRIGGER</td><td>Adds an action of that type and opens its first page</td></tr><tr><td>2</td><td>ACTION</td><td>Which action the later pages edit</td><td>Opens it; Shift + push deletes it</td></tr><tr><td>3</td><td>TRIGGER</td><td>GATE plays while held. 1-SHOT plays to the end (and behaves as LATCH if a sample loops). LATCH plays until pressed again.</td><td></td></tr><tr><td>4</td><td>RETRIG</td><td>A second press while it&#x27;s playing: RESTART cuts the first and starts again, STACK plays alongside it, IGNORE does nothing until the first has finished.</td><td></td></tr><tr><td>5</td><td>STACK</td><td>How many presses can sound at once with RETRIG on STACK, 1 to 8.</td><td></td></tr><tr><td>6</td><td>CHOKE</td><td>OFF, or a choke group 1 to 32: slots in the same group cut each other off.</td><td></td></tr><tr><td>7</td><td>NAME</td><td></td><td>Renames the slot with the knobs</td></tr><tr><td>8</td><td>COPY TO</td><td></td><td>Then play a note: the slot is copied onto it, replacing what was there</td></tr></tbody></table></div>
@@ -22,7 +22,7 @@
 </section>
 <section id="sample-inputs">
 <h2><span class="num">2.2</span> INPUTS</h2>
-<p class="access">NEXT from SLOT.<br>Launchpad: Right arrow from SLOT.</p>
+<p class="access">NEXT from SLOT.</p>
 <figure><img src="images/sample-inputs.png" width="480" height="320" alt="Figure 2.2. INPUTS"><figcaption>Figure 2.2. INPUTS</figcaption></figure>
 <p>Everything that plays this slot in the live kit: each assignment is a device, a channel and a note or range of notes.</p>
 <div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>ASSIGN</td><td>Which assignment is shown</td><td>LEARN: then play a note on any device to add one. Shift + push removes the one shown</td></tr><tr><td>2</td><td>DEVICE</td><td>The device, or ANY</td><td>Renames the device</td></tr><tr><td>3</td><td>CHANNEL</td><td>ANY, or MIDI channel 1 to 16</td><td></td></tr><tr><td>4</td><td>PLAYS</td><td>1 NOTE plays the slot at its root. PITCHED shifts each note by its distance from the root. STEPPED (Levels) plays every note at the root with one setting stepped from low to high across the range.</td><td></td></tr><tr><td>5</td><td>LOW</td><td>The lowest note of the range</td><td></td></tr><tr><td>6</td><td>HIGH</td><td>The highest note of the range</td><td></td></tr><tr><td>7</td><td>STEPS</td><td>With STEPPED, what steps across the range: VELOCITY or TUNE</td><td></td></tr><tr><td>8</td><td>ZONE KEYS</td><td>With zones (ZONES page): the device whose keys play them</td><td></td></tr></tbody></table></div>
@@ -30,7 +30,7 @@
 </section>
 <section id="sample-play">
 <h2><span class="num">2.3</span> PLAY</h2>
-<p class="access">NEXT from INPUTS.<br>Launchpad: Right arrow.</p>
+<p class="access">NEXT from INPUTS.</p>
 <figure><img src="images/sample-play.png" width="480" height="320" alt="Figure 2.3. PLAY"><figcaption>Figure 2.3. PLAY</figcaption></figure>
 <p>How the slot plays when several notes reach it, mostly for pitched ranges.</p>
 <p>The picture lists the slot&#x27;s samples and where each lives: whole in memory or streamed from the card. MEMORY decides which. Each whole one says why: short, MEMORY WHOLE, a loop, REVERSE, zones, played across keys, or not 16-bit.</p>
@@ -39,7 +39,7 @@
 </section>
 <section id="sample-arp">
 <h2><span class="num">2.4</span> ARP</h2>
-<p class="access">NEXT from PLAY.<br>Launchpad: Right arrow.</p>
+<p class="access">NEXT from PLAY.</p>
 <figure><img src="images/sample-arp.png" width="480" height="320" alt="Figure 2.4. ARP"><figcaption>Figure 2.4. ARP</figcaption></figure>
 <p>An arpeggiator for notes held on a pitched range, played one at a time at the sequencer&#x27;s tempo, modelled on FL Studio&#x27;s.</p>
 <div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>ARP</td><td>OFF, UP, DOWN, UP DOWN, RANDOM or AS PLAYED</td><td></td></tr><tr><td>2</td><td>CHORD</td><td>Builds a shape on each held key (MAJOR, MINOR, 7, SUS, POWER, scales and more), or OFF</td><td></td></tr><tr><td>3</td><td>RATE</td><td>How fast, 1/4 to 1/32T</td><td></td></tr><tr><td>4</td><td>GATE</td><td>How long each note sounds, 10 to 100% of a step</td><td></td></tr><tr><td>5</td><td>OCTAVES</td><td>Spreads the pattern up 1 to 4 octaves</td><td></td></tr><tr><td>6</td><td>REPEAT</td><td>Plays it 1 to 8 times before moving up an octave</td><td></td></tr><tr><td>7</td><td>LATCH</td><td>Keeps playing after the keys are let go</td><td>Toggles</td></tr></tbody></table></div>
