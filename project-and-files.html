@@ -56,8 +56,9 @@
 <h2><span class="num">8.6</span> CCS</h2>
 <p class="access">Shift + KIT.</p>
 <figure><img src="images/ccs.png" width="480" height="320" alt="Figure 8.6. CCS"><figcaption>Figure 8.6. CCS</figcaption></figure>
-<p>Every controller CC bound with LEARN, what it sets and its value. A bound setting shows a CC tag on its column. KIT, LEARN or MODE closes.</p>
-<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>CC</td><td>Moves through the bindings</td><td>Shift + push removes the one picked</td></tr></tbody></table></div>
+<p>Every controller CC bound with LEARN, what it sets and its value. A bound setting shows a CC tag on its column. KIT or LEARN closes.</p>
+<p>Knobs 2 to 5 set how the picked CC moves its setting. PICKUP stops a knob making the setting jump: it does nothing until it reaches the setting&#x27;s value. Turning a panel knob makes it wait to catch up again.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>CC</td><td>Moves through the bindings</td><td>Shift + push removes the one picked</td></tr><tr><td>2</td><td>MIN</td><td>Where the setting is with the CC at its bottom, 0 to 100% of its range (Shift: steps of 1)</td><td></td></tr><tr><td>3</td><td>MAX</td><td>Where it is with the CC at its top. MIN above MAX turns it round</td><td></td></tr><tr><td>4</td><td>CURVE</td><td>LINEAR, EXP (more travel at the bottom) or LOG (more at the top)</td><td></td></tr><tr><td>5</td><td>MODE</td><td>ABSOLUTE, PICKUP, RELATIVE (an endless encoder sending steps: 1 to 63 up, 65 to 127 down) or FINE (14-bit: a CC under 32 paired with CC+32)</td><td></td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 <section id="setup">
@@ -65,7 +66,7 @@
 <p class="access">SETUP.</p>
 <figure><img src="images/setup.png" width="480" height="320" alt="Figure 8.7. SETUP"><figcaption>Figure 8.7. SETUP</figcaption></figure>
 <p>Device settings, kept on the card apart from any project. SETUP or MODE closes and saves them.</p>
-<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>PHONES</td><td>Headphone level (the codec&#x27;s)</td><td></td></tr><tr><td>2</td><td>SCREEN</td><td>Backlight brightness</td><td></td></tr><tr><td>3</td><td>MEMORY</td><td>Shows sample memory in use</td><td>FREE UNUSED: frees samples nothing plays, after stopping everything</td></tr><tr><td>4</td><td>STRESS</td><td></td><td>RUN: the 30 second stress test, showing audio CPU</td></tr><tr><td>5</td><td>LINE OUT</td><td>Line out level: 0dB is the loudest without clipping, down to -8.7dB</td><td></td></tr></tbody></table></div>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>OUTPUT</td><td>Every output&#x27;s level, 0dB down to -60dB (Shift: 0.1dB steps)</td><td></td></tr><tr><td>2</td><td>SCREEN</td><td>Backlight brightness</td><td></td></tr><tr><td>3</td><td>MEMORY</td><td>Shows sample memory in use</td><td>FREE UNUSED: frees samples nothing plays, after stopping everything</td></tr><tr><td>4</td><td>STRESS</td><td></td><td>RUN: the 30 second stress test, showing audio CPU</td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 </main>

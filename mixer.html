@@ -11,7 +11,7 @@
 <main>
 <p class="chapter-no">Chapter 5</p>
 <h1>Mixer</h1>
-<ol class="chapter-toc"><li><a href="#mixer-level">5.1 MIXER faders</a></li><li><a href="#mixer-pan">5.2 MIXER, PAN row</a></li><li><a href="#channel-strip">5.3 Channel: STRIP</a></li><li><a href="#channel-inserts">5.4 Channel: INSERTS</a></li><li><a href="#channel-comp">5.5 Channel: COMP</a></li><li><a href="#channel-sends">5.6 Channel: SENDS</a></li><li><a href="#channel-bus-a">5.7 BUS A and B</a></li><li><a href="#channel-main-out">5.8 MAIN OUT</a></li></ol>
+<ol class="chapter-toc"><li><a href="#mixer-level">5.1 MIXER faders</a></li><li><a href="#mixer-pan">5.2 MIXER, PAN row</a></li><li><a href="#channel-strip">5.3 Channel: STRIP</a></li><li><a href="#channel-inserts">5.4 Channel: INSERTS</a></li><li><a href="#channel-fx">5.5 Channel: FX</a></li><li><a href="#channel-comp">5.6 Channel: COMP</a></li><li><a href="#channel-sends">5.7 Channel: SENDS</a></li><li><a href="#channel-bus-a">5.8 BUS A and B</a></li><li><a href="#channel-main-out">5.9 MAIN OUT</a></li><li><a href="#channel-main-fx">5.10 MAIN FX</a></li></ol>
 <section id="mixer-level">
 <h2><span class="num">5.1</span> MIXER faders</h2>
 <p class="access">MIXER.</p>
@@ -31,7 +31,7 @@
 <p class="access">Push a channel&#x27;s knob on the faders.</p>
 <figure><img src="images/channel-strip.png" width="480" height="320" alt="Figure 5.3. Channel: STRIP"><figcaption>Figure 5.3. Channel: STRIP</figcaption></figure>
 <p>One channel&#x27;s own pages. PREV and NEXT step its pages, Shift + PREV and NEXT step channels, and pushing knob 8 goes back to the faders. The top lists the slots playing through it.</p>
-<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>LEVEL</td><td>The channel&#x27;s level in dB</td><td></td></tr><tr><td>2</td><td>PAN</td><td>Left to right</td><td></td></tr><tr><td>3</td><td>WIDTH</td><td>Stereo width, 0 (mono) to 100%</td><td></td></tr><tr><td>5</td><td>MUTE</td><td>Silences the channel</td><td>Toggles</td></tr><tr><td>6</td><td>SOLO</td><td>Hears only the soloed channels</td><td>Toggles</td></tr><tr><td>8</td><td>OUTPUT</td><td>MAIN, OUT 3, OUT 4 or OUT 3+4. On OUT 3 or OUT 4 alone, left and right are summed to mono. The individual outputs skip the main out&#x27;s EQ, compressor and MASTER, and have a limiter each</td><td>Back to the faders</td></tr></tbody></table></div>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>LEVEL</td><td>The channel&#x27;s level in dB</td><td></td></tr><tr><td>2</td><td>PAN</td><td>Left to right</td><td></td></tr><tr><td>3</td><td>WIDTH</td><td>Stereo width, 0 (mono) to 100%</td><td></td></tr><tr><td>4</td><td>INPUT</td><td>OFF, or the line in on this channel: LINE (stereo), LINE L or LINE R (one side on both). It goes through the channel&#x27;s inserts, FX, sends and output like anything played on it, and SAMPLING records it by recording this channel</td><td></td></tr><tr><td>5</td><td>MUTE</td><td>Silences the channel</td><td>Toggles</td></tr><tr><td>6</td><td>SOLO</td><td>Hears only the soloed channels</td><td>Toggles</td></tr><tr><td>8</td><td>OUTPUT</td><td>MAIN, one of OUT 3 to OUT 8, or a pair: OUT 3+4, 5+6 or 7+8. On one output alone, left and right are summed to mono. The individual outputs skip the main out&#x27;s EQ, compressor and MASTER, and have a limiter each</td><td>Back to the faders</td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 <section id="channel-inserts">
@@ -41,36 +41,60 @@
 <div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>FILTER</td><td>OFF, LOW, HIGH or BAND</td><td></td></tr><tr><td>2</td><td>CUTOFF</td><td>The filter&#x27;s cutoff</td><td></td></tr><tr><td>3</td><td>RESO</td><td>Its resonance</td><td></td></tr><tr><td>5</td><td>DRIVE</td><td>Saturation, 0 to 100%</td><td></td></tr><tr><td>6</td><td>BITS</td><td>Bit crushing, 16 down to 4 bits</td><td></td></tr><tr><td>7</td><td>RATE</td><td>Sample-rate reduction: holds each sample for 1 to 32</td><td></td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
-<section id="channel-comp">
-<h2><span class="num">5.5</span> Channel: COMP</h2>
+<section id="channel-fx">
+<h2><span class="num">5.5</span> Channel: FX</h2>
 <p class="access">NEXT from INSERTS.</p>
-<figure><img src="images/channel-comp.png" width="480" height="320" alt="Figure 5.5. Channel: COMP"><figcaption>Figure 5.5. Channel: COMP</figcaption></figure>
-<p>A compressor after the inserts. It&#x27;s off at a RATIO of 1:1.</p>
-<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>4</td><td>MAKEUP</td><td>Gain after it, 0 to 24dB</td><td></td></tr><tr><td>5</td><td>THRESH</td><td>Where it starts, -60 to 0dB</td><td></td></tr><tr><td>6</td><td>RATIO</td><td>How hard, 1:1 to 20:1</td><td></td></tr><tr><td>7</td><td>ATTACK</td><td>0.5 to 200ms</td><td></td></tr><tr><td>8</td><td>RELEASE</td><td>10ms to 2s</td><td>Back to the faders</td></tr></tbody></table></div>
+<figure><img src="images/channel-fx.png" width="480" height="320" alt="Figure 5.5. Channel: FX"><figcaption>Figure 5.5. Channel: FX</figcaption></figure>
+<p>One effect per channel, after the inserts and before the compressor. FX picks it; the page then shows that effect&#x27;s settings, and each effect keeps its own, so switching back finds them as you left them. Changing FX starts the new one from silence.</p>
+<p>TAPE: a worn tape machine. DRIVE saturates it, lopsided like tape, so it thickens rather than fuzzes. AGE rolls off the top end. WOW is a slow drift in pitch, FLUTTER a fast wobble. HISS is tape noise. With WOW and FLUTTER at 0 it adds no delay.</p>
+<p>VINYL: a record. AGE narrows the band from both ends. WARP is the slow pitch drift of a warped record. CRACKLE is clicks and the odd pop, NOISE the rumble and surface hiss.</p>
+<p>TAPE&#x27;s hiss and VINYL&#x27;s crackle and noise come in with the sound and fade out after it, so a silent channel stays silent.</p>
+<p>CHORUS thickens with a slowly moving copy of the sound; FLANGER sweeps a shorter one, and FEEDBACK makes it ring (below 0 it rings hollow). PHASER sweeps notches through the sound, and FEEDBACK sharpens them. MIX sets how much of the effect is heard against the dry sound.</p>
+<p>TREMOLO moves the level with the LFO, or with MODE on PAN moves it between the sides. SHAPE is a smooth SINE or a choppy SQUARE.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>FX</td><td>OFF, TAPE, VINYL, CHORUS, FLANGER, PHASER or TREMOLO</td><td></td></tr><tr><td>2</td><td>DRIVE</td><td>TAPE: saturation</td><td></td></tr><tr><td>3</td><td>AGE</td><td>TAPE: top end rolled off, from about 18kHz down to 3.5kHz. VINYL: the band narrowed, 20Hz to 16kHz down to 250Hz to 3kHz</td><td></td></tr><tr><td>5</td><td>WOW</td><td>TAPE: slow pitch drift, once every 2 seconds, up to about 14 cents either way</td><td></td></tr><tr><td>6</td><td>FLUTTER</td><td>TAPE: fast pitch wobble, up to about 24 cents either way</td><td></td></tr><tr><td>7</td><td>HISS</td><td>TAPE: tape noise while the channel plays</td><td></td></tr><tr><td>5</td><td>WARP</td><td>VINYL: slow pitch drift at 0.55Hz, a 33rpm record&#x27;s turn</td><td></td></tr><tr><td>6</td><td>CRACKLE</td><td>VINYL: clicks and pops, up to about 100 a second</td><td></td></tr><tr><td>7</td><td>NOISE</td><td>VINYL: rumble and surface hiss</td><td></td></tr><tr><td>2</td><td>RATE</td><td>CHORUS, FLANGER, PHASER: the sweep, 0.05 to 5Hz. TREMOLO: 0.1 to 20Hz</td><td></td></tr><tr><td>3</td><td>DEPTH</td><td>How far it sweeps, or for TREMOLO how far the level dips</td><td></td></tr><tr><td>4</td><td>FEEDBACK</td><td>FLANGER: -95 to +95%. PHASER: 0 to 90%</td><td></td></tr><tr><td>7</td><td>SYNC</td><td>CHORUS, FLANGER, PHASER, TREMOLO: RATE becomes a note value, 1/16 to 8/1 (eight bars of 4/4). While the sequencer plays, the sweep is locked to the beat</td><td>Toggles</td></tr><tr><td>8</td><td>MIX</td><td>CHORUS, FLANGER, PHASER: the effect against the dry sound</td><td></td></tr><tr><td>4</td><td>SHAPE / MODE</td><td>TREMOLO: knob 4 is SHAPE (SINE or SQUARE), knob 5 MODE (LEVEL or PAN)</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="channel-comp">
+<h2><span class="num">5.6</span> Channel: COMP</h2>
+<p class="access">NEXT from FX.</p>
+<figure><img src="images/channel-comp.png" width="480" height="320" alt="Figure 5.6. Channel: COMP"><figcaption>Figure 5.6. Channel: COMP</figcaption></figure>
+<p>DUCK, then a compressor after the inserts and FX.</p>
+<p>DUCK dips this channel while another plays: pick the channel to duck under, such as the kick&#x27;s, and it drops by DEPTH whenever that channel is loud, coming back up over RECOVER. That&#x27;s the pumping sidechain sound.</p>
+<p>The compressor is off at a RATIO of 1:1.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>DUCK</td><td>OFF, or the channel (1 to 8) this one dips under</td><td></td></tr><tr><td>2</td><td>DEPTH</td><td>How far it dips when that channel is at half full scale or more</td><td></td></tr><tr><td>3</td><td>RECOVER</td><td>How long it takes to come back up, 20ms to 2s</td><td></td></tr><tr><td>4</td><td>MAKEUP</td><td>Gain after it, 0 to 24dB</td><td></td></tr><tr><td>5</td><td>THRESH</td><td>Where it starts, -60 to 0dB</td><td></td></tr><tr><td>6</td><td>RATIO</td><td>How hard, 1:1 to 20:1</td><td></td></tr><tr><td>7</td><td>ATTACK</td><td>0.5 to 200ms</td><td></td></tr><tr><td>8</td><td>RELEASE</td><td>10ms to 2s</td><td>Back to the faders</td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 <section id="channel-sends">
-<h2><span class="num">5.6</span> Channel: SENDS</h2>
+<h2><span class="num">5.7</span> Channel: SENDS</h2>
 <p class="access">NEXT from COMP.</p>
-<figure><img src="images/channel-sends.png" width="480" height="320" alt="Figure 5.6. Channel: SENDS"><figcaption>Figure 5.6. Channel: SENDS</figcaption></figure>
-<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>SEND A</td><td>How much goes to BUS A, OFF up to full</td><td></td></tr><tr><td>2</td><td>SEND B</td><td>How much goes to BUS B</td><td></td></tr><tr><td>3</td><td>TAP</td><td>POST or PRE fader for both sends (mute and solo silence both)</td><td>Toggles</td></tr></tbody></table></div>
+<figure><img src="images/channel-sends.png" width="480" height="320" alt="Figure 5.7. Channel: SENDS"><figcaption>Figure 5.7. Channel: SENDS</figcaption></figure>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>SEND A</td><td>How much goes to BUS A, OFF up to full</td><td></td></tr><tr><td>2</td><td>SEND B</td><td>How much goes to BUS B</td><td></td></tr><tr><td>3</td><td>TAP</td><td>POST or PRE fader for both sends (mute and solo silence both)</td><td>Toggles</td></tr><tr><td>5</td><td>A INTO B</td><td>BUS A&#x27;s effect on into BUS B as well, such as delay repeats into a reverb. The same from every channel</td><td></td></tr><tr><td>6</td><td>B INTO A</td><td>BUS B&#x27;s into BUS A. Only one way at a time: turning one up turns the other off</td><td></td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 <section id="channel-bus-a">
-<h2><span class="num">5.7</span> BUS A and B</h2>
+<h2><span class="num">5.8</span> BUS A and B</h2>
 <p class="access">NEXT from SENDS (BUS A), then BUS B.</p>
-<figure><img src="images/channel-bus-a.png" width="480" height="320" alt="Figure 5.7. BUS A and B"><figcaption>Figure 5.7. BUS A and B</figcaption></figure>
+<figure><img src="images/channel-bus-a.png" width="480" height="320" alt="Figure 5.8. BUS A and B"><figcaption>Figure 5.8. BUS A and B</figcaption></figure>
 <p>The two send busses, the same from every channel. Each shows only its effect&#x27;s settings: here a reverb. BUS B, below, is a delay.</p>
-<figure><img src="images/channel-bus-b.png" width="480" height="320" alt="Figure 5.7b. BUS B with a delay"><figcaption>Figure 5.7b. BUS B with a delay</figcaption></figure>
-<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>EFFECT</td><td>OFF, DELAY or REVERB</td><td></td></tr><tr><td>2</td><td>SIZE / TIME</td><td>Reverb: the room&#x27;s size. Delay: the delay time up to 2s, or with SYNC on a note value from 1/32 to 1/1</td><td></td></tr><tr><td>3</td><td>FEEDBACK</td><td>Delay: how much repeats, up to 95%</td><td></td></tr><tr><td>4</td><td>DAMP</td><td>Darkens the reverb&#x27;s tail, or each repeat</td><td></td></tr><tr><td>5</td><td>SYNC</td><td>Delay: TIME follows the tempo as a note value</td><td>Toggles</td></tr><tr><td>6</td><td>RETURN</td><td>The level back into the mix</td><td></td></tr><tr><td>7</td><td>PAN</td><td>Where the return sits</td><td></td></tr><tr><td>8</td><td>OUTPUT</td><td>Where the return plays: MAIN, OUT 3, OUT 4 or OUT 3+4, as a channel&#x27;s OUTPUT</td><td>Back to the faders</td></tr></tbody></table></div>
+<figure><img src="images/channel-bus-b.png" width="480" height="320" alt="Figure 5.8b. BUS B with a delay"><figcaption>Figure 5.8b. BUS B with a delay</figcaption></figure>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>EFFECT</td><td>OFF, DELAY or REVERB</td><td></td></tr><tr><td>2</td><td>SIZE / TIME</td><td>Reverb: the room&#x27;s size. Delay: the delay time up to 2s, or with SYNC on a note value from 1/32 to 1/1</td><td></td></tr><tr><td>3</td><td>FEEDBACK</td><td>Delay: how much repeats, up to 95%</td><td></td></tr><tr><td>4</td><td>DAMP</td><td>Darkens the reverb&#x27;s tail, or each repeat</td><td></td></tr><tr><td>5</td><td>SYNC</td><td>Delay: TIME follows the tempo as a note value</td><td>Toggles</td></tr><tr><td>6</td><td>RETURN</td><td>The level back into the mix</td><td></td></tr><tr><td>7</td><td>PAN</td><td>Where the return sits</td><td></td></tr><tr><td>8</td><td>OUTPUT</td><td>Where the return plays, as a channel&#x27;s OUTPUT</td><td>Back to the faders</td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 <section id="channel-main-out">
-<h2><span class="num">5.8</span> MAIN OUT</h2>
+<h2><span class="num">5.9</span> MAIN OUT</h2>
 <p class="access">NEXT from BUS B.</p>
-<figure><img src="images/channel-main-out.png" width="480" height="320" alt="Figure 5.8. MAIN OUT"><figcaption>Figure 5.8. MAIN OUT</figcaption></figure>
+<figure><img src="images/channel-main-out.png" width="480" height="320" alt="Figure 5.9. MAIN OUT"><figcaption>Figure 5.9. MAIN OUT</figcaption></figure>
 <p>The main output: a 3-band EQ, its level, then a compressor.</p>
 <div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>LOW</td><td>Low shelf, -12 to +12dB</td><td></td></tr><tr><td>2</td><td>MID</td><td>Mid band</td><td></td></tr><tr><td>3</td><td>HIGH</td><td>High shelf</td><td></td></tr><tr><td>4</td><td>MASTER</td><td>The output level</td><td></td></tr><tr><td>5</td><td>THRESH</td><td>The compressor&#x27;s threshold</td><td></td></tr><tr><td>6</td><td>RATIO</td><td>Its ratio</td><td></td></tr><tr><td>7</td><td>ATTACK</td><td>Its attack</td><td></td></tr><tr><td>8</td><td>RELEASE</td><td>Its release</td><td></td></tr></tbody></table></div>
+<p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
+</section>
+<section id="channel-main-fx">
+<h2><span class="num">5.10</span> MAIN FX</h2>
+<p class="access">NEXT from MAIN OUT.</p>
+<figure><img src="images/channel-main-fx.png" width="480" height="320" alt="Figure 5.10. MAIN FX"><figcaption>Figure 5.10. MAIN FX</figcaption></figure>
+<p>Effects on the whole mix, after its level: TAPE or VINYL, with the same settings as on a channel&#x27;s FX page, and a DJ filter.</p>
+<p>FILTER is one knob: turn it left for a low-pass closing down to 200Hz, right for a high-pass opening up to 5kHz. In the middle it&#x27;s off. It comes after beat repeat, so a repeat can be filtered too.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>FX</td><td>OFF, TAPE or VINYL</td><td></td></tr><tr><td>2-7</td><td>-</td><td>That effect&#x27;s settings, as on a channel&#x27;s FX page</td><td></td></tr><tr><td>8</td><td>FILTER</td><td>The DJ filter, -100% (low-pass) to +100% (high-pass)</td><td></td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 </main>
