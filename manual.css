@@ -127,3 +127,5 @@ main > section > ul li { margin-bottom: 8px; }
   section { break-inside: avoid-page; }
   a { text-decoration: none; }
 }
+
+.title-page h1 svg.logo { height: 110px; width: auto; display: block; }

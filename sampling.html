@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>7. Sampling - Grid Sampler manual</title>
+<title>7. Sampling - tako manual</title>
 <link rel="stylesheet" href="manual.css">
 </head>
 <body>
-<header class="running"><a href="index.html">Grid Sampler manual</a><span>Chapter 7</span></header>
+<header class="running"><a href="index.html">tako manual</a><span>Chapter 7</span></header>
 <main>
 <p class="chapter-no">Chapter 7</p>
 <h1>Sampling</h1>
@@ -19,7 +19,8 @@
 <p>Records what the instrument plays, the main out or one mixer channel, into a new sample. The bar shows the source&#x27;s level from -60dB to full scale; with START on SOUND a line marks THRESH. What&#x27;s recorded goes through the same limiter as the main out, without the metronome.</p>
 <p>When the take ends it is trimmed and normalised if those are on, saved as /recordings/REC001.wav (then REC002 and so on), and the screen closes asking for a note: the next note played gets a new slot named after the file, as USE SAMPLE does. Any button instead leaves the file on the card unused.</p>
 <p>A take is held in free sample memory as it records, so FREE is how long it can run. The settings can&#x27;t change while a take is armed or recording. A channel records what it sends to the main out: after its level, pan, mute and solo, without the send effects. Loading a project or starting a new one throws a take away. Line in and mic come with the next hardware.</p>
-<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>SOURCE</td><td>MAIN, or a mixer channel CH 1 to CH 8</td><td></td></tr><tr><td>2</td><td>START</td><td>NOW: when REC is pushed. SOUND: when the source reaches THRESH. PLAY: at the pattern&#x27;s top, from PLAY or the next time round</td><td></td></tr><tr><td>3</td><td>THRESH</td><td>The level SOUND starts at, -60 to -6dB</td><td></td></tr><tr><td>4</td><td>BARS</td><td>OFF, or stop after that many bars at the tempo</td><td></td></tr><tr><td>5</td><td>TRIM</td><td>Cuts the silence (under -60dB) off both ends</td><td>Flips it</td></tr><tr><td>6</td><td>NORMALISE</td><td>Raises the take until its peak is at -0.1dB</td><td>Flips it</td></tr><tr><td>7</td><td>FREE</td><td>How long a take sample memory has room for</td><td></td></tr><tr><td>8</td><td>REC</td><td>Shows the time recorded</td><td>ARM; then STOP, which keeps the take. Shift: DISCARD throws it away</td></tr></tbody></table></div>
+<p>START on SONG exports instead: REC (EXPORT) plays the pattern, or the arrangement if the transport is set to one, once from the top, and writes the source to the card as it plays, so it can run as long as the card has room. It ends at the song&#x27;s end once the sound has died away (up to 10 seconds more for a release or reverb), or when REC is pushed. It&#x27;s saved as /exports/ and the project&#x27;s name (SONG for an unnamed one), with -2, -3 and so on beside earlier ones, exactly as it sounds: TRIM and NORMALISE don&#x27;t apply, and it isn&#x27;t put on a note. A mixer channel as SOURCE exports that channel&#x27;s stem. The pattern or arrangement loops again afterwards if it did before.</p>
+<div class="table"><table class="knobs"><thead><tr><th>Knob</th><th>Setting</th><th>Turn</th><th>Push</th></tr></thead><tbody><tr><td>1</td><td>SOURCE</td><td>MAIN, or a mixer channel CH 1 to CH 8</td><td></td></tr><tr><td>2</td><td>START</td><td>NOW: when REC is pushed. SOUND: when the source reaches THRESH. PLAY: at the pattern&#x27;s top, from PLAY or the next time round. SONG: export the song to the card</td><td></td></tr><tr><td>3</td><td>THRESH</td><td>The level SOUND starts at, -60 to -6dB</td><td></td></tr><tr><td>4</td><td>BARS</td><td>OFF, or stop after that many bars at the tempo</td><td></td></tr><tr><td>5</td><td>TRIM</td><td>Cuts the silence (under -60dB) off both ends</td><td>Flips it</td></tr><tr><td>6</td><td>NORMALISE</td><td>Raises the take until its peak is at -0.1dB</td><td>Flips it</td></tr><tr><td>7</td><td>FREE</td><td>How long a take sample memory has room for; CARD for an export</td><td></td></tr><tr><td>8</td><td>REC</td><td>Shows the time recorded</td><td>ARM (EXPORT on SONG); then STOP, which keeps the take. Shift: DISCARD throws it away</td></tr></tbody></table></div>
 <p class="note">Knobs not listed do nothing here. Shift + push puts most settings back to how a new one has them.</p>
 </section>
 </main>
